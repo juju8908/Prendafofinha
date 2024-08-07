@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Fofa</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        #message-box {
+            text-align: center;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        #message-box button {
+            background-color: #1411c9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message-box">
+        <h1>Surpresa Fofa</h1>
+        <p id="message">Clica no botão para veres uma mensagem fofa!</p>
+        <button onclick="showMessage()">Clica aqui!</button>
+    </div>
+    <script>
+        const messages = [
+            "És a pessoa mais especial do mundo!",
+            "Cada momento contigo é mágico.",
+            "O teu sorriso ilumina o meu dia.",
+            "Não vejo a hora de estarmos juntos novamente.",
+            "Morro de saudades dos teus beijinhos.",
+            "Mal posso esperar para te esmagar.",
+            "És muito mais do que sonhei.",
+            "Obrigada por me irritares todos os dias :)",
+            "Obrigada por seres quem és comigo.",
+            "Odeio-te!!!"
+        ];
+
+        function showMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
